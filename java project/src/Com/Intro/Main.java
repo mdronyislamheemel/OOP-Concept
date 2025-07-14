@@ -20,7 +20,7 @@ public class Main {
         rony = new Student();*/
 
         //we can write this in a single line
-        Student rony = new Student();
+        //Student rony = new Student();
         //System.out.println(rony); jodi print kori tahole just akta random number print korbe
         //abar amra jodi 
         // System.out.println(rony.rno); print kori tahole by default 0 print korbe but if we assign the value
@@ -34,9 +34,11 @@ public class Main {
         System.out.println(rony.marks);*/
 
         //so after the add construtor object if I try to print the value it will return same as before
-        System.out.println(rony.rno);
-        System.out.println(rony.names);
-        System.out.println(rony.marks);
+        // System.out.println(rony.rno);
+        // System.out.println(rony.names);
+        // System.out.println(rony.marks);
+
+        Student rony = new Student(15, "Rony Islam", 87.5f);
 
     }
 }
@@ -50,10 +52,21 @@ class Student {
     //we need a way to add the values of the above properties object by object
     //so that we need one word to access every object
     //Constructor
+
+    void greeting(){
+        System.out.println("My name is:");
+    }
+
     Student(){
         this.rno = 14;
         this.names = "Rony";
         this.marks = 87.5f;
+    }
+
+    Student(int roll, String naam, float mark){
+        this.rno = roll;
+        this.names = naam;
+        this.marks = mark;
     }
     
 }
